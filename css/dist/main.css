@@ -5,11 +5,18 @@ body {
 }
 
 header {
-  background: -webkit-linear-gradient(0deg, #fce38a, #f38181);
-  background: -moz-linear-gradient(0deg, #fce38a, #f38181);
-  background: linear-gradient(0deg, #fce38a, #f38181);
+  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+  background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   color: white;
   width: 100%;
+}
+header img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
 }
 header .navigation {
   display: flex;
@@ -30,12 +37,20 @@ header .navigation .list ul li {
 header .navigation .list ul li a {
   text-decoration: none;
   color: white;
+  display: block;
+}
+header .navigation .list ul li a:hover {
+  color: #fce38a;
+  border-bottom: 2px solid #fce38a;
 }
 header .navigation .list ul .active-list {
   border-bottom: 2px solid #fce38a;
 }
 header .navigation .list ul .active-list a {
   color: #fce38a;
+}
+header .navigation .list ul .active-list:hover {
+  border: none;
 }
 header .template {
   font-family: "Kaushan Script", cursive;
@@ -67,16 +82,34 @@ header .learn-more-button a {
   border: 4px solid white;
   padding: 0.4% 2%;
 }
+header .learn-more-button a:hover {
+  color: #f38181;
+  border-color: #f38181;
+}
 header .progress {
   display: flex;
   justify-content: space-around;
   text-transform: uppercase;
-  margin-top: 5%;
+  margin: 4.5% 16% 0% 16%;
 }
 header .progress div {
   flex-basis: 18%;
 }
+header .progress div p span {
+  font-weight: bold;
+}
 header .progress hr {
   border: 2px solid white;
   background-color: white;
+}
+header .progress .progress-bar ::-webkit-progress-bar {
+  background: white;
+}
+header .progress .progress-bar ::-webkit-progress-value {
+  background: #f38181;
+}
+header .progress .progress-bar progress {
+  border-radius: 0;
+  height: 5px;
+  width: 100%;
 }
