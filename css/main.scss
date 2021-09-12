@@ -1,14 +1,25 @@
+$first-text-color: black;
+$second-text-color: white;
+$first-active-color: rgb(243, 129, 129);
+$second-active-color:rgb(252, 227, 138);
 body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 header{
-    background: -webkit-linear-gradient(0deg, rgb(252, 227, 138), rgb(243, 129, 129));
-    background: -moz-linear-gradient(0deg, rgb(252, 227, 138), rgb(243, 129, 129));
-    background: linear-gradient(0deg, rgb(252, 227, 138), rgb(243, 129, 129));
-    color: white;
+    background: -webkit-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+    background: -moz-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+    background: linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+    color: $second-text-color;
     width: 100%;
+    img{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
     .navigation{
         display: flex;
         justify-content: space-around;
@@ -23,14 +34,22 @@ header{
                     margin-right: 10%;
                     a{
                         text-decoration: none;
-                        color: white;
+                        color: $second-text-color;
+                        display: block;
+                    }
+                    a:hover{
+                        color: $second-active-color;
+                        border-bottom: 2px solid $second-active-color;
                     }
                 }
                 .active-list{
-                    border-bottom: 2px solid #fce38a;
+                    border-bottom: 2px solid $second-active-color;
                     a{
-                        color: #fce38a;
+                        color: $second-active-color;
                     }
+                }
+                .active-list:hover{
+                    border: none;
                 }
             }
         }
@@ -50,8 +69,8 @@ header{
         hr{
             width: 10%;
             height: 2px;
-            background-color: white;
-            border: white;
+            background-color: $second-text-color;
+            border: $second-text-color;
         }
     }
     .learn-more-button{
@@ -60,22 +79,44 @@ header{
         justify-content: center;
         a{
             text-decoration: none;
-            color: white;
-            border: 4px solid white;
+            color: $second-text-color;
+            border: 4px solid  $second-text-color;
             padding: 0.4% 2%;
+        }
+        a:hover{
+            color: $first-active-color;
+            border-color: $first-active-color;
         }
     }
     .progress{
         display: flex;
         justify-content: space-around;
         text-transform: uppercase;
-        margin-top: 5%;
+        margin: 4.5% 16% 0% 16%;
         div{
             flex-basis: 18%;
+            p{
+                span{
+                    font-weight: bold;
+                }
+            }
         }
         hr{
-            border: 2px solid white;
-            background-color: white;
+            border: 2px solid $second-text-color;
+            background-color: $second-text-color;
+        }
+        .progress-bar{
+            ::-webkit-progress-bar {
+                background: $second-text-color;
+            }
+            ::-webkit-progress-value {
+                background: $first-active-color;
+            }
+            progress{
+                border-radius: 0;
+                height: 5px;
+                width: 100%;
+            }
         }
     }
 }
