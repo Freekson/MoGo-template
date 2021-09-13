@@ -1,26 +1,31 @@
 $first-text-color: black;
 $second-text-color: white;
+$third-text-color: gray;
 $first-active-color: rgb(243, 129, 129);
 $second-active-color:rgb(252, 227, 138);
+$background-color: #95e1d3;
 body{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
 header{
     background: -webkit-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
     background: -moz-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
     background: linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
     color: $second-text-color;
     width: 100%;
+    position: relative;
+
     img{
         position: absolute;
-        z-index: -1;
+        opacity: 0.5;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
+        z-index: -1;
     }
-    .navigation{
+    nav{
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -67,8 +72,8 @@ header{
         text-align: center;
         text-transform: uppercase;
         hr{
-            width: 10%;
-            height: 2px;
+            width: 5%;
+            height: 3px;
             background-color: $second-text-color;
             border: $second-text-color;
         }
@@ -92,7 +97,7 @@ header{
         display: flex;
         justify-content: space-around;
         text-transform: uppercase;
-        margin: 4.5% 16% 0% 16%;
+        margin: 4.5% 10% 0% 10%;
         div{
             flex-basis: 18%;
             p{
@@ -118,5 +123,99 @@ header{
                 width: 100%;
             }
         }
+    }
+}
+.caption-block{
+    text-align: center;
+    .caption{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 24pt;
+        margin-bottom: 2%;
+        margin-top: 8%;
+    }
+    .under-caption{
+        font-size: 30pt;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .arcticle{
+        margin: 0 15% 5% 15%;
+        color: $third-text-color;
+     }
+    hr{
+        width: 5%;
+        height: 2px;
+        border: 1px solid $first-active-color;
+        background-color: $first-active-color;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+.image-block{
+    margin-bottom: 5%;
+    text-align: center;
+    img{
+        margin-right: 2%;
+    }
+    img:last-child{
+        margin-right: 0;
+    }
+}
+.counter-block{
+    background-color: $background-color;
+    color: $second-text-color;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    margin-bottom: 5%;
+    div{
+        margin-right: 5%;
+        text-align: center;
+        h3{
+            font-size: 72pt;
+            margin: 0;
+        }
+        p{
+            text-transform: uppercase;
+        }
+    }
+    div:last-child{
+        margin-right: 0;
+    }
+}
+.icon-block{
+    margin-bottom: 8%;
+    .half-block{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+            color: $background-color;
+            font-size: 25pt;
+            margin-bottom: 3%;
+        }
+        i:first-child{
+            margin-left: 10%;
+        }
+        div{
+            flex-basis: 20%;
+            .header{
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .article{
+                color: $third-text-color;
+            }
+        }
+        div:last-child{
+            margin-right: 10%;
+        }
+    }
+    hr{
+        width: 80%;
+        border: 0.10px solid $third-text-color;
+        background-color: $third-text-color;
+        margin-bottom: 2%;
+        margin-top: 2%;
     }
 }
