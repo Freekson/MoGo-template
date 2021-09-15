@@ -212,3 +212,29 @@ header .progress .progress-bar progress {
   margin-bottom: 2%;
   margin-top: 2%;
 }
+
+.tablet-block {
+  margin-bottom: 50%;
+}
+.tablet-block .background-image {
+  position: absolute;
+  width: 100%;
+  height: 133%;
+  z-index: -1;
+  opacity: 0.5;
+}
+.tablet-block .caption-block {
+  padding-top: 1%;
+}
+.tablet-block .ipad {
+  position: absolute;
+  padding-left: 35%;
+  padding-top: 1.35%;
+  z-index: 1;
+}
+.tablet-block .iphone {
+  position: absolute;
+  padding-left: 58%;
+  padding-top: 15%;
+  z-index: 2;
+}
