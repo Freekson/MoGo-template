@@ -1,6 +1,6 @@
 $first-text-color: black;
 $second-text-color: white;
-$third-text-color: #9999;
+$third-text-color: #cdcdcd;
 $first-active-color: rgb(243, 129, 129);
 $second-active-color:rgb(252, 227, 138);
 $background-color: #95e1d3;
@@ -261,6 +261,8 @@ header{
             .header-text{
                 display: flex;
                 align-items: center;
+                position: relative;
+                cursor: pointer;
                 i{
                     margin-right: 2%;
                     color: $background-color;
@@ -272,21 +274,96 @@ header{
                     font-weight: regular;
                 }
             }
-            .additional-text{
-                p{
-                    padding: 2% 5%;
-                    font-size: 10pt;
-                    color: $third-text-color;
+            .header-text::after{
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-top: 2px solid $third-text-color;
+                border-right: 2px solid $third-text-color;
+                position: absolute;
+                z-index: 1;
+                right: 20px;
+                bottom: 40%;
+                transform: rotate(135deg);
+            }
+            .scroll-bar{
+                .additional-text{
+                    height: 200px;
+                    display: none;
+                    text-indent: 1em;
+                    overflow-y: scroll;
+                    p{
+                        padding: 0 5%;
+                        font-size: 10pt;
+                        color: $third-text-color;
+                    }
+                }
+                .additional-text::-webkit-scrollbar{
+                    background-color: #dfdfdf;
+                    border-radius: 8px;
+                    width: 10px;
+                }
+                .additional-text::-webkit-scrollbar-thumb{
+                    background-color: $background-color;
+                    border-radius: 8px;
                 }
             }
         }
-        .active{
-            
+        #active{ 
             .header-text{
                 border-bottom: 1px solid $third-text-color;
             }
+            .header-text::after{
+                top: 40%;
+                transform: rotate(-45deg);
+            }
+            .scroll-bar{
+                padding: 10px 15px 5px 0;
+                .additional-text{
+                    display: block;
+                } 
+            }
         } 
     }
-
-    margin-bottom: 200px;
+}
+.coment-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: $third-text-color;
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    img{
+        border: 3px solid $background-color;
+        padding: 2%;
+        margin-right: 2%;
+        height: 100%;
+    }
+    .aside-text{
+        flex-basis: 40%;
+        p{
+            font-size: 14pt;
+        }
+        .author{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            hr{
+                width: 20%;
+                height: 2px;
+                margin: 0;
+                margin-right: 5%;
+                border: 0.10px solid $first-active-color;
+                background-color: $first-active-color;
+            }
+            p{
+                font-family: 'Kaushan Script', cursive;
+                color: $first-text-color;
+                font-size: 16pt;
+            }
+        }
+    }
 }
