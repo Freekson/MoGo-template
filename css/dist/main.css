@@ -131,7 +131,7 @@ header .progress .progress-bar progress {
 }
 .caption-block .arcticle {
   margin: 0 15% 5% 15%;
-  color: #9999;
+  color: #cdcdcd;
 }
 .caption-block hr {
   width: 5%;
@@ -200,15 +200,15 @@ header .progress .progress-bar progress {
   font-weight: bold;
 }
 .icon-block .half-block div .article {
-  color: #9999;
+  color: #cdcdcd;
 }
 .icon-block .half-block div:last-child {
   margin-right: 10%;
 }
 .icon-block hr {
   width: 80%;
-  border: 0.1px solid #9999;
-  background-color: #9999;
+  border: 0.1px solid #cdcdcd;
+  background-color: #cdcdcd;
   margin-bottom: 2%;
   margin-top: 2%;
 }
@@ -243,7 +243,6 @@ header .progress .progress-bar progress {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
 }
 .skills-block img {
   flex-basis: 33%;
@@ -254,13 +253,15 @@ header .progress .progress-bar progress {
   margin-left: 2%;
 }
 .skills-block .aside-text div[class^=block] {
-  border: 1px solid #9999;
+  border: 1px solid #cdcdcd;
   padding: 0;
   margin: 2% 0;
 }
 .skills-block .aside-text div[class^=block] .header-text {
   display: flex;
   align-items: center;
+  position: relative;
+  cursor: pointer;
 }
 .skills-block .aside-text div[class^=block] .header-text i {
   margin-right: 2%;
@@ -272,11 +273,90 @@ header .progress .progress-bar progress {
   text-transform: uppercase;
   font-weight: regular;
 }
-.skills-block .aside-text div[class^=block] .additional-text p {
-  padding: 2% 5%;
-  font-size: 10pt;
-  color: #9999;
+.skills-block .aside-text div[class^=block] .header-text::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #cdcdcd;
+  border-right: 2px solid #cdcdcd;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 40%;
+  transform: rotate(135deg);
 }
-.skills-block .aside-text .active .header-text {
-  border-bottom: 1px solid #9999;
+.skills-block .aside-text div[class^=block] .scroll-bar .additional-text {
+  height: 200px;
+  display: none;
+  text-indent: 1em;
+  overflow-y: scroll;
+}
+.skills-block .aside-text div[class^=block] .scroll-bar .additional-text p {
+  padding: 0 5%;
+  font-size: 10pt;
+  color: #cdcdcd;
+}
+.skills-block .aside-text div[class^=block] .scroll-bar .additional-text::-webkit-scrollbar {
+  background-color: #dfdfdf;
+  border-radius: 8px;
+  width: 10px;
+}
+.skills-block .aside-text div[class^=block] .scroll-bar .additional-text::-webkit-scrollbar-thumb {
+  background-color: #95e1d3;
+  border-radius: 8px;
+}
+.skills-block .aside-text #active .header-text {
+  border-bottom: 1px solid #cdcdcd;
+}
+.skills-block .aside-text #active .header-text::after {
+  top: 40%;
+  transform: rotate(-45deg);
+}
+.skills-block .aside-text #active .scroll-bar {
+  padding: 10px 15px 5px 0;
+}
+.skills-block .aside-text #active .scroll-bar .additional-text {
+  display: block;
+}
+
+.coment-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  color: #cdcdcd;
+  padding: 2%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+.coment-block img {
+  border: 3px solid #95e1d3;
+  padding: 2%;
+  margin-right: 2%;
+  height: 100%;
+}
+.coment-block .aside-text {
+  flex-basis: 40%;
+}
+.coment-block .aside-text p {
+  font-size: 14pt;
+}
+.coment-block .aside-text .author {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.coment-block .aside-text .author hr {
+  width: 20%;
+  height: 2px;
+  margin: 0;
+  margin-right: 5%;
+  border: 0.1px solid #f38181;
+  background-color: #f38181;
+}
+.coment-block .aside-text .author p {
+  font-family: "Kaushan Script", cursive;
+  color: black;
+  font-size: 16pt;
 }
