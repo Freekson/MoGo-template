@@ -360,3 +360,30 @@ header .progress .progress-bar progress {
   color: black;
   font-size: 16pt;
 }
+
+.creators-block {
+  display: flex;
+  justify-content: center;
+}
+.creators-block .creator {
+  margin-right: 2%;
+  text-align: center;
+}
+.creators-block .creator .caption {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.creators-block .creator .professional {
+  color: #cdcdcd;
+  font-style: italic;
+}
+.creators-block .creator:last-child {
+  margin-right: 0;
+}
+
+.logo-block {
+  margin-top: 5%;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 3% 0;
+}
