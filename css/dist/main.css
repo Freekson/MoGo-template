@@ -328,7 +328,7 @@ header .progress .progress-bar progress {
   color: #cdcdcd;
   padding: 2%;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 }
 .coment-block img {
   padding: 2%;
@@ -404,4 +404,70 @@ header .progress .progress-bar progress {
 .images-block div[class^=row] img {
   width: 100%;
   margin-bottom: -4px;
+}
+
+.client-block {
+  background: url("/css/dist/images/Background3.png");
+  background-size: cover;
+}
+.client-block .caption-block {
+  padding-top: 4%;
+}
+.client-block .caption-block .caption {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+.client-block .caption-block .under-caption {
+  font-weight: 500;
+}
+.client-block .image-block {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+.client-block .image-block div[class^=row] {
+  flex-basis: 40%;
+}
+.client-block .image-block div[class^=row] .client {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.client-block .image-block div[class^=row] .client img {
+  height: 50%;
+  margin-right: 5%;
+}
+.client-block .image-block div[class^=row] .client .text {
+  text-align: left;
+  width: 80%;
+}
+.client-block .image-block div[class^=row] .client .text hr {
+  width: 15%;
+  height: 2px;
+  margin-left: 0;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border: 0.1px solid #f38181;
+  background-color: #f38181;
+}
+.client-block .image-block div[class^=row] .client .text p {
+  margin: 0;
+  color: gray;
+}
+.client-block .image-block div[class^=row] .client .text p:nth-last-child(3) {
+  font-style: italic;
+  color: black;
+}
+.client-block .image-block div[class^=row] .client .text .header {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 2%;
+}
+.client-block .image-block .row1 {
+  margin-left: 10%;
+}
+.client-block .image-block .row2 {
+  margin-right: 10%;
+  margin-left: 5%;
 }
