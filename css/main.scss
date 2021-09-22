@@ -336,7 +336,7 @@ header{
     color: $third-text-color;
     padding: 2%;
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
     img{
         padding: 2%;
         margin-right: 5%;
@@ -408,6 +408,71 @@ header{
         img{
             width: 100%;
             margin-bottom: -4px;
+        }
+    }
+}
+.client-block{
+    background: url("/css/dist/images/Background3.png");
+    background-size: cover;
+    .caption-block{
+        padding-top: 4%;
+        .caption{
+            font-family: 'Montserrat', sans-serif ;
+            font-style: italic;
+        }
+        .under-caption{
+            font-weight: 500;
+        }
+    }
+    .image-block{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 4%;
+        div[class^=row]{
+            flex-basis: 40%;
+            .client{
+                display: flex; 
+                align-items: center; 
+                margin-bottom: 10%;
+                img{
+                    height: 50%;
+                    margin-right: 5%;
+                }
+                .text{
+                    text-align: left;
+                    width: 80%;
+                    hr{
+                        width: 15%;
+                        height: 2px;
+                        margin-left: 0;
+                        margin-bottom: 5%;
+                        margin-top: 5%;
+                        border: 0.10px solid $first-active-color;
+                        background-color: $first-active-color;
+                    }
+                    p{
+                        margin: 0;
+                        color: gray
+                    }
+                    p:nth-last-child(3) {
+                        font-style: italic;
+                        color: black;
+                    }
+                    .header{
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: $first-text-color;
+                        margin-bottom: 2%;
+                    }
+                }
+            }
+        }
+        .row1{
+            margin-left: 10%;
+        }
+        .row2{
+            margin-right: 10%;
+            margin-left: 5%;
         }
     }
 }
