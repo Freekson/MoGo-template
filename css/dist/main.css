@@ -471,3 +471,68 @@ header .progress .progress-bar progress {
   margin-right: 10%;
   margin-left: 5%;
 }
+
+.blog-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+  width: 100%;
+}
+.blog-block .news {
+  flex-basis: 30%;
+  margin-left: 5%;
+}
+.blog-block .news .image-block {
+  position: relative;
+}
+.blog-block .news .image-block .date {
+  background-color: #95e1d3;
+  text-align: center;
+  width: 60px;
+  height: 70px;
+  position: absolute;
+  bottom: 8%;
+  left: -5px;
+}
+.blog-block .news .image-block .date p {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+.blog-block .news .image-block .date p:first-child {
+  font-weight: bold;
+  font-size: 16pt;
+  padding-top: 20%;
+}
+.blog-block .news .image-block .date p:last-child {
+  font-style: italic;
+  font-weight: normal;
+}
+.blog-block .news p:nth-child(2) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.blog-block .news p:nth-child(3) {
+  color: #cdcdcd;
+}
+.blog-block .news hr {
+  width: 100%;
+  background-color: #cdcdcd;
+  border: 0.2px solid #cdcdcd;
+}
+.blog-block .news .view-and-comment {
+  display: flex;
+  align-items: center;
+}
+.blog-block .news .view-and-comment p {
+  font-weight: normal;
+  color: #cdcdcd;
+  font-style: italic;
+  margin-left: 2%;
+}
+.blog-block .news .view-and-comment img:nth-child(3) {
+  margin-left: 5%;
+}
+.blog-block .news:last-child {
+  margin-right: 5%;
+}
