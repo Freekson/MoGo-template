@@ -540,3 +540,22 @@ header{
         margin-right: 5%;
     }
 }
+.map-block{
+    text-align: center;
+    color: $first-active-color;
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: url(/css/dist/images/background4.png);
+    background-repeat: none;
+    padding: 2%;
+    margin-bottom: 5%;
+    hr{
+        width: 10%;
+        background-color: $first-active-color;
+        border: 2px solid $first-active-color;
+    }
+    p{
+        margin: 1%;
+    }
+}
