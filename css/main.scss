@@ -559,3 +559,127 @@ header{
         margin: 1%;
     }
 }
+footer{
+    .conclusion-block{
+        display: flex;
+        justify-content: center;
+        margin-right: 5%;
+        margin-left: 5%;
+        .header{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        .footer-first-block{
+            flex-basis: 40%;
+            padding-right: 3%;
+            margin-left: 4%;
+            h3{
+                color: $third-text-color;
+                font-size: 42pt;
+                margin: 0;
+            }
+            p{
+                color: $third-text-color;
+            }
+            .followers{
+                display: flex;
+                align-items: center;
+                font-size: 16pt;
+                h4{
+                    margin-right: 1%;
+                }
+                p{
+                    color: $first-text-color;
+                    font-weight: 500;
+                }
+            }
+            hr{
+                width: 100%;
+                background-color: $third-text-color;
+                border: 0.2px solid $third-text-color;
+                margin: 0;
+                margin-top: -3%;
+            }
+            .follow-us{
+                display: flex;
+                align-items: center;
+                p{
+                    margin-right: 5%;
+                    font-style: italic;
+                }
+                a{
+                    margin-right: 4%;
+                    color: $background-color;
+                    font-size: 16pt;
+                }
+            }
+            form{
+                display: flex;
+                input{
+                    height: 40px;
+                    width: 50%;
+                    border: 1px solid $third-text-color;
+                    padding-left: 5%;
+                    color: $background-color;
+                    font-size: 12pt;
+                    margin-right: -1%;
+                }
+                button{
+                    height: 44px;
+                    width: 30%;
+                    background-color: $background-color;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 14pt;
+                    color: $second-text-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        .footer-second-block{
+            .image-text-block{
+                display: flex;
+                margin-bottom: 5%;
+                img{
+                    margin-right: 5%;
+                }
+                .aside-text{
+                    .header{
+                        margin: 0;
+                    }
+                    .date{
+                        color: $third-text-color;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+        .footer-third-block{
+            flex-basis: 30%;
+            .view-more{
+                margin-top: 5%;
+                a{
+                    font-style: italic;
+                    text-decoration: none;
+                    color: $third-text-color;
+                }
+            }
+        }
+    }
+    .footer-block{
+        text-align: center;
+        hr{
+            width: 85%;
+            background-color: $third-text-color;
+            border: 0.2px solid $third-text-color;
+        }
+        p{
+            font-weight: 500;
+            a{
+                text-decoration: none;
+                color: $first-active-color;
+            }
+        }
+    }
+}
