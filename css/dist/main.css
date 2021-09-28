@@ -155,15 +155,61 @@ header .progress .progress-bar progress {
   margin-bottom: 3%;
 }
 
-.image-block {
+.about-block {
   margin-bottom: 5%;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 10%;
 }
-.image-block img {
+.about-block .image-block {
   margin-right: 1%;
   width: 28%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
-.image-block img:last-child {
+.about-block .image-block .image {
+  width: 90%;
+  transition: transform 0.1s linear;
+  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+  background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
+}
+.about-block .image-block .image img {
+  transition: opacity 0.1s linear;
+  display: block;
+  width: 100%;
+}
+.about-block .text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16pt;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  transition: transform 0.1s linear;
+}
+
+.image-block:hover .image {
+  box-shadow: 10px 10px 0 #95e1d3;
+  transform: translate3d(-10px, -10px, 0);
+}
+.image-block:hover img {
+  opacity: 0.1;
+}
+.image-block:hover .text {
+  left: -10px;
+  opacity: 1;
+}
+.image-block:hover .image-block:last-child {
   margin-right: 0;
 }
 
