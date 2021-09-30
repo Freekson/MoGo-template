@@ -429,6 +429,7 @@ header .progress .progress-bar progress {
 }
 .creators-block .creator {
   margin-right: 2%;
+  cursor: pointer;
 }
 .creators-block .creator .creator-all {
   text-align: center;
