@@ -1000,3 +1000,54 @@ footer .footer-block p a:hover {
     padding: 1%;
   }
 }
+@media (max-width: 820px) {
+  .counter-block {
+    flex-wrap: wrap;
+  }
+
+  .skills-block {
+    flex-wrap: wrap;
+  }
+  .skills-block img {
+    margin-right: 0;
+    width: 90%;
+  }
+  .skills-block .aside-text {
+    flex-basis: 90%;
+  }
+
+  .icon-block .half-block {
+    display: block;
+    text-align: center;
+  }
+  .icon-block .half-block i:first-child {
+    margin-left: 0;
+  }
+  .icon-block .half-block div {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .icon-block .half-block div:last-child {
+    margin-right: 0;
+  }
+
+  .tablet-block .images .ipad {
+    width: 80%;
+  }
+  .tablet-block .images .iphone {
+    display: none;
+  }
+
+  .creators-block {
+    flex-wrap: wrap;
+  }
+
+  .images-block {
+    display: block;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .images-block .row .image-all {
+    margin-bottom: 10%;
+  }
+}
