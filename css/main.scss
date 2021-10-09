@@ -1039,9 +1039,64 @@ footer{
         }
     }
 }
-@media (max-width: 770px){
-
+@media (max-width: 820px){
+    .counter-block{
+        flex-wrap: wrap;
+    }
+    .skills-block{
+        flex-wrap: wrap;
+        img{
+            margin-right: 0;
+            width: 90%;
+        }
+        .aside-text{
+            flex-basis: 90%;
+        }
+    }
+    .icon-block{
+        .half-block{
+            display: block;
+            text-align: center;
+            i:first-child{
+                margin-left: 0;
+            }
+            div{
+                padding-right: 5%;
+                padding-left: 5%;
+            }
+            div:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+    .tablet-block{
+        .images{
+            .ipad{
+                width: 80%;;
+            }
+            .iphone{
+                display: none;
+            }
+        }
+    }
+    .creators-block{
+        flex-wrap: wrap;
+    }
+    .images-block{
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+        .row{
+            .image-all{
+                margin-bottom: 10%;
+                .image{
+                    img{
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width: 575px){
-
+    
 }
