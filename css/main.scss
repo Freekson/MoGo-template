@@ -900,10 +900,25 @@ footer{
             flex-basis: 30%;
             .image-row{
                 width: 100%;
-                img{
-                    width: 31%;
-                    cursor: pointer;
+                display: flex;
+                margin: 0;
+                .img{
+                    margin-left: 5%;
+                    margin-bottom: 4%;
+                    background: -webkit-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+                    background: -moz-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+                    background: linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
+                    img{
+                        width: 100%;
+                        cursor: pointer;
+                    }
                 }
+                .img:hover{
+                    img{
+                        opacity: .1;
+                    }
+                }
+                
             }
             .view-more{
                 margin-top: 5%;
@@ -1089,10 +1104,6 @@ footer{
         .row{
             .image-all{
                 margin-bottom: 10%;
-                .image{
-                    img{
-                    }
-                }
             }
         }
     }
