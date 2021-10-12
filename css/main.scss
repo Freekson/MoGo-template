@@ -141,6 +141,7 @@ header{
             background-color: $second-text-color;
         }
         .progress-bar{
+            flex-basis: 20%;
             ::-webkit-progress-bar {
                 background: $second-text-color;
             }
@@ -151,6 +152,9 @@ header{
                 border-radius: 0;
                 height: 5px;
                 width: 100%;
+            }
+            .text{
+                white-space: nowrap;
             }
         }
     }
@@ -274,6 +278,7 @@ header{
         align-items: center;
         .icon-all{
             width: 80%;
+            cursor: pointer;
             .icon{
                 transition: all 0.2s;
                 padding: 5%;
@@ -310,7 +315,7 @@ header{
         .icon-all:hover{
             .icon{
                 background: rgba(232, 232, 232, 0.623);
-                transform: translate3d(0, -30px, 0);
+                transform: translate3d(0, -20px, 0);
             }
         }
     }
@@ -579,6 +584,7 @@ header{
         flex-basis: 25%;
         .image-all{
             position: relative;
+            cursor: pointer;
             .image{
                 height: 50%;
                 background: -webkit-linear-gradient(0deg, rgb(252, 227, 138, 0.8), rgb(243, 129, 129, 0.8));
@@ -1097,6 +1103,23 @@ footer{
             margin-bottom: 10%;
         }
     }
+    .tablet-block{
+        .images{
+            .iphone{
+                display: none;
+            }
+        }
+    }
+    .icon-block{
+        .half-block{
+            .icon-all:hover{
+                .icon{
+                    background: rgba(232, 232, 232, 0.623);
+                    transform: translate3d(0, -10px, 0);
+                }
+            }
+        }
+    }
     .blog-block{
         display: block;
         text-align: left;
@@ -1104,6 +1127,11 @@ footer{
             width: 70%;
             margin-left: 15%;
             margin-bottom: 5%;
+        }
+        .news:hover{
+            .news-all{
+                transform: translate3d(15px, -15px, 0);
+            }
         }
     }
     .map-block{
@@ -1146,6 +1174,15 @@ footer{
                     }
                 }
             }
+            .footer-first-block:hover{
+                h3{
+                    transform: translate3d(0, -20%,0);
+                    color: $first-active-color;
+                }
+                .followers{
+                    transform: translate3d(36%, 0,0);
+                }
+            }
             .footer-second-block{
                 width: 80%;
                 margin-left: 10%;
@@ -1155,6 +1192,7 @@ footer{
                 .image-text-block{
                     img{
                         width: 30%;
+                        min-height: 150px;
                     }
                     .aside-text{
                         .header{
@@ -1183,6 +1221,13 @@ footer{
     }
 }
 @media (max-width: 820px){
+    .about-block{
+        flex-direction: column;
+        align-items: center;
+        .image-block{
+            margin-bottom: 5%;
+        }
+    }
     .counter-block{
         flex-wrap: wrap;
     }
@@ -1197,7 +1242,13 @@ footer{
         }
     }
     .icon-block{
+        flex-direction: column;
+        align-items: center;
         .half-block{
+            .icon-all{
+                margin-right: 0;
+                margin-left: 5%;
+            }
             display: block;
             text-align: center;
             i:first-child{
