@@ -12,6 +12,7 @@ header {
   color: white;
   width: 100%;
   position: relative;
+  height: 100%;
 }
 header img {
   position: absolute;
@@ -1217,5 +1218,20 @@ footer .footer-block p a:hover {
   }
   .images-block .row .image-all {
     margin-bottom: 10%;
+  }
+}
+@media (max-width: 575px) {
+  header {
+    margin-top: -15px;
+  }
+  header nav {
+    display: none;
+  }
+
+  .coment-block {
+    flex-direction: column;
+  }
+  .coment-block .aside-text .author {
+    margin-left: 30%;
   }
 }
