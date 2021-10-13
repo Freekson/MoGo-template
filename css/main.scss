@@ -19,7 +19,7 @@ header{
     color: $second-text-color;
     width: 100%;
     position: relative;
-
+    height: 100%;
     img{
         position: absolute;
         opacity: 0.5;
@@ -1288,5 +1288,18 @@ footer{
     }
 }
 @media (max-width: 575px){
-    
+    header{
+        margin-top: -15px;
+        nav{
+            display:  none;
+        }
+    }
+    .coment-block{
+        flex-direction: column;
+        .aside-text{
+            .author{
+                margin-left: 30%;
+            }
+        }
+    }
 }
