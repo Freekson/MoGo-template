@@ -12,7 +12,7 @@ header {
   color: white;
   width: 100%;
   position: relative;
-  height: 100%;
+  margin-top: -2%;
 }
 header img {
   position: absolute;
@@ -25,6 +25,7 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 2%;
 }
 header nav .logo {
   margin-left: 5%;
@@ -68,6 +69,57 @@ header nav .list ul .active-list a {
 }
 header nav .list ul .active-list:hover {
   border: none;
+}
+header .nav-toggle {
+  position: absolute;
+  width: 25px;
+  top: 20px;
+  right: 25px;
+  padding: 15px 0;
+  cursor: pointer;
+  display: none;
+}
+header .nav-toggle .toogle {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  margin: auto;
+}
+header .nav-toggle .toogle::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  z-index: 99;
+  top: -8px;
+  padding: -5px;
+  transition: transform 0.3 linear;
+}
+header .nav-toggle .toogle::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  z-index: 99;
+  bottom: -8px;
+  transition: transform 0.3s linear;
+}
+header .active .toogle {
+  background: none;
+}
+header .active .toogle::before {
+  transform-origin: left top;
+  transform: rotate(45deg) translateX(0px);
+}
+header .active .toogle::after {
+  transform-origin: left bottom;
+  transform: rotate(-45deg) translateX(-1px);
 }
 header .template {
   font-family: "Kaushan Script", cursive;
@@ -143,6 +195,14 @@ header .progress .progress-bar progress {
 }
 header .progress .progress-bar .text {
   white-space: nowrap;
+}
+
+.fixed nav {
+  background-color: #f38181;
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  box-shadow: 0 3px 10px #868282;
 }
 
 .caption-block {
@@ -848,12 +908,14 @@ footer .conclusion-block .footer-first-block hr {
 footer .conclusion-block .footer-first-block .follow-us {
   width: 100%;
   display: flex;
-  flex-wrap: no-wrap;
   align-items: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 footer .conclusion-block .footer-first-block .follow-us p {
   margin-right: 5%;
   font-style: italic;
+  min-width: 90px;
 }
 footer .conclusion-block .footer-first-block .follow-us .links {
   width: 100%;
@@ -1222,16 +1284,162 @@ footer .footer-block p a:hover {
 }
 @media (max-width: 575px) {
   header {
+    overflow: hidden;
     margin-top: -15px;
   }
+  header img {
+    width: 200%;
+    margin-right: 200%;
+  }
   header nav {
+    justify-content: left;
+  }
+  header nav .list {
     display: none;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    right: 0;
+    background-color: #f38181;
+    width: 30%;
+  }
+  header nav .list ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    box-shadow: 0 5px 5px #868282;
+  }
+  header nav .list ul li {
+    margin-right: 0;
+    padding: 10%;
+    border-bottom: 1px solid #fce38a;
+  }
+  header nav .list ul .active-list {
+    border-top: 1px solid #fce38a;
+    border-bottom: 1px solid #fce38a;
+  }
+  header nav .list ul .active-list a {
+    color: white;
+  }
+  header .nav-toggle {
+    display: block;
+  }
+  header .template {
+    font-size: 24pt;
+  }
+  header .welcome {
+    font-size: 32pt;
+  }
+  header .welcome hr {
+    width: 35%;
+  }
+  header .learn-more-button {
+    margin-top: 15%;
+  }
+  header .progress {
+    margin-top: 15%;
+  }
+  header .progress .progress-bar {
+    width: 10%;
+  }
+  header .progress .progress-bar .text {
+    font-size: 8pt;
+  }
+
+  .caption-block {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+  .caption-block .caption {
+    font-size: 24pt;
+  }
+  .caption-block .under-caption {
+    font-size: 24pt;
+  }
+  .caption-block hr {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 30%;
+  }
+
+  .about-block .image-block {
+    width: 80%;
   }
 
   .coment-block {
     flex-direction: column;
   }
+  .coment-block img {
+    margin-top: 15%;
+  }
   .coment-block .aside-text .author {
     margin-left: 30%;
+  }
+  .coment-block .aside-text p {
+    padding-left: 5%;
+  }
+
+  .counter-block {
+    font-size: 18pt;
+    flex-direction: column;
+  }
+
+  .icon-block .half-block .icon-all {
+    width: 90%;
+    padding: 0;
+  }
+  .icon-block .half-block .icon-all:hover .icon {
+    transform: none;
+  }
+
+  .skills-block img {
+    margin-bottom: 15%;
+  }
+
+  .logo-block {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-block img {
+    height: 50px;
+  }
+
+  .client-block .image-block div[class^=row] .client .client-all {
+    flex-direction: column;
+  }
+  .client-block .image-block div[class^=row] .client .client-all img {
+    margin-bottom: 15%;
+  }
+  .client-block .image-block div[class^=row] .client .client-all .text {
+    text-align: center;
+  }
+  .client-block .image-block div[class^=row] .client .client-all .text hr {
+    margin-left: 30%;
+    width: 40%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .client-block .image-block div[class^=row] .client:hover .client-all {
+    transform: none;
+  }
+
+  .blog-block .news:hover .news-all {
+    transform: none;
+  }
+
+  .map-block hr {
+    width: 35%;
+  }
+
+  footer .conclusion-block .footer-second-block .image-text-block img {
+    min-height: 100px;
+  }
+  footer .conclusion-block .footer-second-block .image-text-block:hover {
+    transform: none;
   }
 }
