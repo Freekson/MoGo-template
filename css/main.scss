@@ -19,7 +19,7 @@ header{
     color: $second-text-color;
     width: 100%;
     position: relative;
-    height: 100%;
+    margin-top: -2%;
     img{
         position: absolute;
         opacity: 0.5;
@@ -31,6 +31,7 @@ header{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 2%;
         .logo{
             margin-left: 5%;
             a{
@@ -75,6 +76,59 @@ header{
                     border: none;
                 }
             }
+        }
+    }
+    .nav-toggle{
+        position: absolute;
+        width: 25px;
+        top: 20px;
+        right: 25px;
+        padding: 15px 0;
+        cursor: pointer;
+        display: none;
+        .toogle{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $second-text-color;
+            position: absolute;
+            margin: auto;
+        }
+        .toogle::before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background-color: $second-text-color;
+            left: 0;
+            z-index: 99;
+            top: -8px;
+            padding: -5px;
+            transition: transform .3 linear;
+        }
+        .toogle::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background-color: $second-text-color;
+            left: 0;
+            z-index: 99;
+            bottom: -8px;
+            transition: transform .3s linear;
+        }
+    }
+    .active{
+        .toogle{
+            background: none;
+        }
+        .toogle::before{
+            transform-origin: left top;
+            transform: rotate(45deg) translateX(0px);
+        }
+        .toogle::after{
+            transform-origin: left bottom;
+            transform: rotate(-45deg) translateX(-1px);
         }
     }
     .template{
@@ -157,6 +211,15 @@ header{
                 white-space: nowrap;
             }
         }
+    }
+}
+.fixed{
+    nav{
+        background-color: $first-active-color;
+        position: fixed;
+        z-index: 998;
+        width: 100%;
+        box-shadow: 0 3px 10px #868282;
     }
 }
 .caption-block{
@@ -883,11 +946,13 @@ footer{
             .follow-us{
                 width: 100%;
                 display: flex;
-                flex-wrap: no-wrap;
                 align-items: center;
+                margin-top: 3%;
+                margin-bottom: 3%;
                 p{
                     margin-right: 5%;
                     font-style: italic;
+                    min-width: 90px;
                 }
                 .links{
                     width: 100%;
@@ -1289,16 +1354,186 @@ footer{
 }
 @media (max-width: 575px){
     header{
+        overflow: hidden;
         margin-top: -15px;
+        img{
+            width: 200%;
+            margin-right: 200%;
+        }
         nav{
-            display:  none;
+            justify-content: left;
+            .list{
+                display: none;
+                position: absolute;
+                z-index: 999;
+                top: 100%;
+                right: 0;
+                background-color: $first-active-color;
+                width: 30%;
+                ul{
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 0;
+                    width: 100%;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    box-shadow: 0 5px 5px #868282;
+                    li{
+                        margin-right: 0;
+                        padding: 10%;
+                        border-bottom: 1px solid $second-active-color;
+                    }
+                    .active-list{
+                        border-top: 1px solid $second-active-color;
+                        border-bottom: 1px solid $second-active-color;
+                        a{
+                            color: $second-text-color;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-toggle{
+            display: block;
+        }
+        .template{
+            font-size: 24pt;
+        }
+        .welcome{
+            font-size: 32pt;
+            hr{
+                width: 35%;
+            }
+        }
+        .learn-more-button{
+            margin-top: 15%;
+        }
+        .progress{
+            margin-top: 15%;
+            .progress-bar{
+                width: 10%;
+                .text{
+                    font-size: 8pt;
+                }
+            }
+        }
+    }
+    .caption-block{
+        margin-top: 15%;
+        margin-bottom: 15%;
+        .caption{
+            font-size: 24pt;
+        }
+        .under-caption{
+            font-size: 24pt;
+        }
+        hr{
+            margin-top: 7%;
+            margin-bottom: 7%;
+            width: 30%;
+        }
+    }
+    .about-block{
+        .image-block{
+            width: 80%;
         }
     }
     .coment-block{
         flex-direction: column;
+        img{
+            margin-top: 15%;
+        }
         .aside-text{
             .author{
                 margin-left: 30%;
+            }
+            p{
+                padding-left: 5%;
+            }
+        }
+    }
+    .counter-block{
+        font-size: 18pt;
+        flex-direction: column;
+    }
+    .icon-block{
+        .half-block{
+            .icon-all{
+                width: 90%;
+                padding: 0;
+            }
+            .icon-all:hover{
+                .icon{
+                    transform: none;
+                }
+            }
+        }
+    }
+    .skills-block{
+        img{
+            margin-bottom: 15%;
+        }
+    }
+    .logo-block{
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 50px;
+        }
+    }
+    .client-block{
+        .image-block{
+            div[class^=row]{
+                .client{
+                    .client-all{
+                        flex-direction: column;
+                        img{
+                            margin-bottom: 15%;
+                        }
+                        .text{
+                            text-align: center;
+                            hr{
+                                margin-left: 30%;
+                                width: 40%;
+                                margin-top: 10%;
+                                margin-bottom: 10%;
+                            }
+                        }
+                    }
+                }
+                .client:hover{
+                    .client-all{
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+    .blog-block{
+        .news:hover{
+            .news-all{
+                transform: none;
+            }
+        }
+    }
+    .map-block{
+        hr{
+            width: 35%;
+        }
+    }
+    footer{
+        .conclusion-block{
+            .footer-second-block{
+                .image-text-block{
+                    img{
+                        min-height: 100px;
+                    }
+                }
+                .image-text-block:hover{
+                    transform: none;
+                }
             }
         }
     }
