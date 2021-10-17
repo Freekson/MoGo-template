@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mo Go</title>
+    <title>MoGo</title>
     <link rel="stylesheet" href="css/dist/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,24 +15,42 @@
     <script src="https://kit.fontawesome.com/e9b46f2fc6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="fixed">
+    <header id="header">
         <img src="css/dist/images/Background.png" alt="sorry :(">
         <nav>
             <div class="logo">
-                <h2><a href="#">MoGo</a></h2>
+                <h2 data-scroll="#header">MoGo</h2>
             </div>
             <div class="list">
                 <ul>
-                    <li class="active-list"><a href="#1">about</a></li>
-                    <li><a href="#2">service</a></li>
-                    <li><a href="#3">work</a></li>
-                    <li><a href="#4">blog</a></li>
-                    <li><a href="#5">contact</a></li>
-                    <li><a href="#6"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#7"><i class="fas fa-search"></i></a></li>
+                    <li>
+                        <a href="#1" data-scroll="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="#2" data-scroll="#service">service</a>
+                    </li>
+                    <li>
+                        <a href="#3" data-scroll="#work">work</a>
+                    </li>
+                    <li>
+                        <a href="#4" data-scroll="#blog">blog</a>
+                    </li>
+                    <li>
+                        <a href="#5" data-scroll="#contact">contact</a>
+                    </li>
+                    <li>
+                        <a href="#6">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#7">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="nav-toggle active">
+            <div class="nav-toggle" id="nav-toogle">
                 <span class="toogle">
     
                 </span>
@@ -77,7 +95,7 @@
             </div>
         </div>
     </header>
-    <section class="caption-block">
+    <section class="caption-block" id="about">
         <p class="caption">What we do</p>
         <h4 class="under-caption">Story about us</h4>
         <hr>
@@ -134,7 +152,7 @@
             <p>members</p>
         </div>
     </section>
-    <section class="caption-block">
+    <section class="caption-block" id="service">
         <p class="caption">We work with</p>
         <h4 class="under-caption">Amazing Services</h4>
         <hr>
@@ -220,35 +238,35 @@
     <section class="skills-block">
         <img src="css/dist/images/image4.png" alt="sorry :(">
         <div class="aside-text">
-            <div class="block-1" id="active">
+            <div class="block-1" id="active" data-collapse="#text1">
                 <div class="header-text">
                     <i class="far fa-images"></i>
                     <p>Photography</p> 
                 </div>
                 <div class="scroll-bar">
-                    <div class="additional-text">
+                    <div class="additional-text" id="text1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p>
                     </div>
                 </div>
             </div>
-            <div class="block-2">
+            <div class="block-2" data-collapse="#text2">
                 <div class="header-text">
                     <i class="fas fa-sliders-h"></i>
                     <p>creativity</p>
                 </div>
                 <div class="scroll-bar">
-                    <div class="additional-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p>                    </div>
+                    <div class="additional-text"  id="text2">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p>                    </div>
                 </div>
             </div>
-            <div class="block-3">
+            <div class="block-3" data-collapse="#text3">
                 <div class="header-text">
                     <i class="fas fa-bullseye"></i>
                 <p>web design</p>
                 </div>
                 <div class="scroll-bar">
-                    <div class="additional-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p>                    </div>
+                    <div class="additional-text"  id="text3">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p><p> Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <br>proident, sunt in culpa qui officia deserunt.</p>                    </div>
                 </div>
             </div>
         </div>
@@ -343,7 +361,7 @@
     <section class="logo-block">
         <img src="css/dist/images/logo-images.png" alt="sorry :(">
     </section>
-    <section class="caption-block">
+    <section class="caption-block" id="work">
         <p class="caption">What we do</p>
         <h4 class="under-caption">some of our work</h4>
         <hr>
@@ -496,7 +514,7 @@
             </div>
         </div>
     </section>
-    <section class="caption-block">
+    <section class="caption-block" id="blog">
         <p class="caption">Our stories</p>
         <h4 class="under-caption">Latest blog</h4>
         <hr>
@@ -568,7 +586,7 @@
         <p>Open map</p>
         <hr>
     </section>
-    <footer>
+    <footer id="contact">
         <section class="conclusion-block">
             <div class="footer-first-block">
                 <h3>MoGo</h3>
