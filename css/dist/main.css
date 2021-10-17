@@ -50,6 +50,7 @@ header nav .list ul {
 header nav .list ul li {
   list-style: none;
   margin-right: 3%;
+  height: 15px;
 }
 header nav .list ul li a {
   text-decoration: none;
@@ -61,19 +62,14 @@ header nav .list ul li a:hover {
   color: #fce38a;
   border-bottom: 2px solid #fce38a;
 }
-header nav .list ul .active-list {
-  border-bottom: 2px solid #fce38a;
-}
-header nav .list ul .active-list a {
+header nav .list ul li .active {
   color: #fce38a;
-}
-header nav .list ul .active-list:hover {
-  border: none;
+  border-bottom: 2px solid #fce38a;
 }
 header .nav-toggle {
   position: absolute;
   width: 25px;
-  top: 20px;
+  top: 25px;
   right: 25px;
   padding: 15px 0;
   cursor: pointer;
@@ -198,6 +194,7 @@ header .progress .progress-bar .text {
 }
 
 .fixed nav {
+  margin-top: 0;
   background-color: #f38181;
   position: fixed;
   z-index: 998;
@@ -1294,6 +1291,9 @@ footer .footer-block p a:hover {
   header nav {
     justify-content: left;
   }
+  header nav .logo {
+    margin-top: 10px;
+  }
   header nav .list {
     display: none;
     position: absolute;
@@ -1313,9 +1313,16 @@ footer .footer-block p a:hover {
     box-shadow: 0 5px 5px #868282;
   }
   header nav .list ul li {
+    height: 15px;
     margin-right: 0;
     padding: 10%;
     border-bottom: 1px solid #fce38a;
+  }
+  header nav .list ul li .active {
+    border-bottom: none;
+  }
+  header nav .list ul li a:hover {
+    border-bottom: none;
   }
   header nav .list ul .active-list {
     border-top: 1px solid #fce38a;
@@ -1323,6 +1330,9 @@ footer .footer-block p a:hover {
   }
   header nav .list ul .active-list a {
     color: white;
+  }
+  header .active .list {
+    display: block;
   }
   header .nav-toggle {
     display: block;
