@@ -55,6 +55,7 @@ header{
                 li{
                     list-style: none;
                     margin-right: 3%;
+                    height: 15px;
                     a{
                         text-decoration: none;
                         color: $second-text-color;
@@ -65,15 +66,10 @@ header{
                         color: $second-active-color;
                         border-bottom: 2px solid $second-active-color;
                     }
-                }
-                .active-list{
-                    border-bottom: 2px solid $second-active-color;
-                    a{
+                    .active{
                         color: $second-active-color;
+                        border-bottom: 2px solid $second-active-color;
                     }
-                }
-                .active-list:hover{
-                    border: none;
                 }
             }
         }
@@ -81,7 +77,7 @@ header{
     .nav-toggle{
         position: absolute;
         width: 25px;
-        top: 20px;
+        top: 25px;
         right: 25px;
         padding: 15px 0;
         cursor: pointer;
@@ -215,6 +211,7 @@ header{
 }
 .fixed{
     nav{
+        margin-top: 0;
         background-color: $first-active-color;
         position: fixed;
         z-index: 998;
@@ -1362,6 +1359,9 @@ footer{
         }
         nav{
             justify-content: left;
+            .logo{
+                margin-top: 10px;
+            }
             .list{
                 display: none;
                 position: absolute;
@@ -1379,9 +1379,16 @@ footer{
                     margin-top: 0;
                     box-shadow: 0 5px 5px #868282;
                     li{
+                        height: 15px;
                         margin-right: 0;
                         padding: 10%;
                         border-bottom: 1px solid $second-active-color;
+                        .active{
+                            border-bottom: none;
+                        }
+                        a:hover{
+                            border-bottom: none;
+                        }
                     }
                     .active-list{
                         border-top: 1px solid $second-active-color;
@@ -1391,6 +1398,11 @@ footer{
                         }
                     }
                 }
+            }
+        }
+        .active{
+            .list{
+                display: block;
             }
         }
         .nav-toggle{
