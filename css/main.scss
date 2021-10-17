@@ -389,7 +389,7 @@ header{
 }
 .tablet-block{
     width: 100%;
-    background: url("/css/dist/images/Background2.png");
+    background-image: url(../dist/images/background2.png);
     background-size: cover;
     margin: 0 auto;
     .caption-block{
@@ -695,7 +695,7 @@ header{
     }
 }
 .client-block{
-    background: url("/css/dist/images/Background3.png");
+    background-image: url(../dist/images/background3.png);
     background-size: cover;
     .caption-block{
         padding-top: 4%;
