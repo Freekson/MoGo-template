@@ -371,7 +371,7 @@ header .progress .progress-bar .text {
 
 .tablet-block {
   width: 100%;
-  background: url("/css/dist/images/Background2.png");
+  background-image: url(../dist/images/background2.png);
   background-size: cover;
   margin: 0 auto;
 }
@@ -667,7 +667,7 @@ header .progress .progress-bar .text {
 }
 
 .client-block {
-  background: url("/css/dist/images/Background3.png");
+  background: url(../dist/images/background4.png);
   background-size: cover;
 }
 .client-block .caption-block {
@@ -835,7 +835,7 @@ header .progress .progress-bar .text {
   font-size: 24pt;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: url(/css/dist/images/background4.png);
+  background-image: url(../dist/images/background4.png);
   background-repeat: none;
   padding: 2%;
   margin-bottom: 5%;
