@@ -6,13 +6,11 @@ body {
 }
 
 header {
-  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   color: white;
   width: 100%;
+  height: 100vh;
   position: relative;
-  margin-top: -2%;
 }
 header img {
   position: absolute;
@@ -25,7 +23,6 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 2%;
 }
 header nav .logo {
   margin-left: 5%;
@@ -36,7 +33,7 @@ header nav .logo a {
   transition: all 0.2s;
 }
 header nav .logo:hover a {
-  color: #fce38a;
+  color: rgb(252, 227, 138);
 }
 header nav .list {
   font-size: small;
@@ -59,12 +56,12 @@ header nav .list ul li a {
   transition: color 0.2s linear;
 }
 header nav .list ul li a:hover {
-  color: #fce38a;
-  border-bottom: 2px solid #fce38a;
+  color: rgb(252, 227, 138);
+  border-bottom: 2px solid rgb(252, 227, 138);
 }
 header nav .list ul li .active {
-  color: #fce38a;
-  border-bottom: 2px solid #fce38a;
+  color: rgb(252, 227, 138);
+  border-bottom: 2px solid rgb(252, 227, 138);
 }
 header .nav-toggle {
   position: absolute;
@@ -157,7 +154,7 @@ header .learn-more-button .learn-all:hover a {
   background-color: white;
   font-weight: 500;
   transform: translate3d(-5px, -5px, 0);
-  box-shadow: 5px 5px #f38181;
+  box-shadow: 5px 5px rgb(243, 129, 129);
 }
 header .progress {
   display: flex;
@@ -182,7 +179,7 @@ header .progress .progress-bar ::-webkit-progress-bar {
   background: white;
 }
 header .progress .progress-bar ::-webkit-progress-value {
-  background: #f38181;
+  background: rgb(243, 129, 129);
 }
 header .progress .progress-bar progress {
   border-radius: 0;
@@ -195,8 +192,9 @@ header .progress .progress-bar .text {
 
 .fixed nav {
   margin-top: 0;
-  background-color: #f38181;
+  background-color: rgb(243, 129, 129);
   position: fixed;
+  top: 0;
   z-index: 998;
   width: 100%;
   box-shadow: 0 3px 10px #868282;
@@ -223,8 +221,8 @@ header .progress .progress-bar .text {
 .caption-block hr {
   width: 5%;
   height: 2px;
-  border: 1px solid #f38181;
-  background-color: #f38181;
+  border: 1px solid rgb(243, 129, 129);
+  background-color: rgb(243, 129, 129);
   margin-top: 3%;
   margin-bottom: 3%;
   transition: all 0.5s;
@@ -252,8 +250,6 @@ header .progress .progress-bar .text {
 .about-block .image-block .image {
   width: 90%;
   transition: transform 0.2s linear;
-  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
 }
 .about-block .image-block .image img {
@@ -332,7 +328,7 @@ header .progress .progress-bar .text {
   display: flex;
   align-items: center;
 }
-.icon-block .half-block .icon-all .icon i {
+.icon-block .half-block .icon-all .icon svg {
   color: #95e1d3;
   font-size: 25pt;
   margin-bottom: 3%;
@@ -419,7 +415,7 @@ header .progress .progress-bar .text {
   position: relative;
   cursor: pointer;
 }
-.skills-block .aside-text div[class^=block] .header-text i {
+.skills-block .aside-text div[class^=block] .header-text svg {
   margin-right: 2%;
   color: #95e1d3;
   font-size: 1.5em;
@@ -510,8 +506,8 @@ header .progress .progress-bar .text {
   height: 2px;
   margin: 0;
   margin-right: 5%;
-  border: 0.1px solid #f38181;
-  background-color: #f38181;
+  border: 0.1px solid rgb(243, 129, 129);
+  background-color: rgb(243, 129, 129);
   transition: all 0.5s;
 }
 .coment-block .aside-text .author p {
@@ -540,8 +536,6 @@ header .progress .progress-bar .text {
 .creators-block .creator .creator-all .creator-image {
   height: 470px;
   transition: transform 0.2s linear;
-  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
 }
 .creators-block .creator .creator-all .creator-image img {
@@ -566,10 +560,10 @@ header .progress .progress-bar .text {
   width: 55px;
   height: 55px;
   text-decoration: none;
-  color: #f38181;
+  color: rgb(243, 129, 129);
   font-size: 22pt;
-  background-color: #fce38a;
-  border-right: 0.5px solid #f38181;
+  background-color: rgb(252, 227, 138);
+  border-right: 0.5px solid rgb(243, 129, 129);
   transition: color 0.2s linear;
 }
 .creators-block .creator .creator-all .creator-social a:last-child {
@@ -577,7 +571,7 @@ header .progress .progress-bar .text {
 }
 .creators-block .creator .creator-all .creator-social a:hover {
   color: white;
-  background-color: #f38181;
+  background-color: rgb(243, 129, 129);
 }
 .creators-block .creator .creator-all:first-child {
   margin-left: 5%;
@@ -629,8 +623,6 @@ header .progress .progress-bar .text {
 }
 .images-block .row .image-all .image {
   height: 50%;
-  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
 }
 .images-block .row .image-all .image img {
@@ -667,7 +659,7 @@ header .progress .progress-bar .text {
 }
 
 .client-block {
-  background: url(../dist/images/background4.png);
+  background-image: url(../dist/images/background3.png);
   background-size: cover;
 }
 .client-block .caption-block {
@@ -709,8 +701,8 @@ header .progress .progress-bar .text {
   margin-left: 0;
   margin-bottom: 5%;
   margin-top: 5%;
-  border: 0.1px solid #f38181;
-  background-color: #f38181;
+  border: 0.1px solid rgb(243, 129, 129);
+  background-color: rgb(243, 129, 129);
   transition: all 0.5s;
 }
 .client-block .image-block div[class^=row] .client .client-all .text p {
@@ -831,11 +823,11 @@ header .progress .progress-bar .text {
 
 .map-block {
   text-align: center;
-  color: #f38181;
+  color: rgb(243, 129, 129);
   font-size: 24pt;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: url(../dist/images/background4.png);
+  background-image: url(/css/dist/images/background4.png);
   background-repeat: none;
   padding: 2%;
   margin-bottom: 5%;
@@ -843,8 +835,8 @@ header .progress .progress-bar .text {
 }
 .map-block hr {
   width: 10%;
-  background-color: #f38181;
-  border: 2px solid #f38181;
+  background-color: rgb(243, 129, 129);
+  border: 2px solid rgb(243, 129, 129);
   transition: all 0.5s;
 }
 .map-block p {
@@ -924,7 +916,7 @@ footer .conclusion-block .footer-first-block .follow-us .links a {
   transition: all 0.2s linear;
 }
 footer .conclusion-block .footer-first-block .follow-us .links a:hover {
-  color: #f38181;
+  color: rgb(243, 129, 129);
 }
 footer .conclusion-block .footer-first-block form {
   display: flex;
@@ -953,14 +945,14 @@ footer .conclusion-block .footer-first-block form button {
   transition: all 0.2s;
 }
 footer .conclusion-block .footer-first-block form button:hover {
-  background-color: #f38181;
+  background-color: rgb(243, 129, 129);
 }
 footer .conclusion-block .footer-first-block:hover h3 {
   transform: translate3d(60px, 0, 0);
-  color: #f38181;
+  color: rgb(243, 129, 129);
 }
 footer .conclusion-block .footer-first-block:hover .followers {
-  transform: translate3d(200px, 0, 0);
+  transform: translate3d(75px, 0, 0);
 }
 footer .conclusion-block .footer-second-block {
   margin-right: 3%;
@@ -1009,8 +1001,6 @@ footer .conclusion-block .footer-third-block .image-row .image-block {
 footer .conclusion-block .footer-third-block .image-row .image-block .img {
   height: 80px;
   width: 80px;
-  background: -webkit-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
-  background: -moz-linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   background: linear-gradient(0deg, rgba(252, 227, 138, 0.8), rgba(243, 129, 129, 0.8));
   overflow: hidden;
   transition: all 0.2s;
@@ -1041,11 +1031,11 @@ footer .conclusion-block .footer-third-block .image-row .image-block .link a {
   width: 40px;
   height: 40px;
   text-decoration: none;
-  color: #f38181;
+  color: rgb(243, 129, 129);
   font-size: 16pt;
-  background-color: #fce38a;
+  background-color: rgb(252, 227, 138);
   transition: all 0.2s linear;
-  border: 2px solid #f38181;
+  border: 2px solid rgb(243, 129, 129);
 }
 footer .conclusion-block .footer-third-block .image-row .image-block:hover .img {
   transform: translate3d(-5px, -10px, 0);
@@ -1059,9 +1049,9 @@ footer .conclusion-block .footer-third-block .image-row .image-block:hover .link
   opacity: 1;
 }
 footer .conclusion-block .footer-third-block .image-row .image-block:hover .link a:hover {
-  color: #fce38a;
-  background-color: #f38181;
-  border: 2px solid #fce38a;
+  color: rgb(252, 227, 138);
+  background-color: rgb(243, 129, 129);
+  border: 2px solid rgb(252, 227, 138);
 }
 footer .conclusion-block .footer-third-block .view-more {
   margin-top: 5%;
@@ -1087,7 +1077,7 @@ footer .footer-block p {
 }
 footer .footer-block p a {
   text-decoration: none;
-  color: #f38181;
+  color: rgb(243, 129, 129);
 }
 footer .footer-block p a:hover {
   text-decoration: underline;
@@ -1100,7 +1090,6 @@ footer .footer-block p a:hover {
   .creators-block .creator .creator-all .creator-image {
     height: 370px;
   }
-
   .client-block .image-block {
     display: block;
   }
@@ -1112,16 +1101,13 @@ footer .footer-block p a:hover {
   .client-block .caption-block {
     margin-bottom: 10%;
   }
-
   .tablet-block .images .iphone {
     display: none;
   }
-
   .icon-block .half-block .icon-all:hover .icon {
     background: rgba(232, 232, 232, 0.623);
     transform: translate3d(0, -10px, 0);
   }
-
   .blog-block {
     display: block;
     text-align: left;
@@ -1134,11 +1120,9 @@ footer .footer-block p a:hover {
   .blog-block .news:hover .news-all {
     transform: translate3d(15px, -15px, 0);
   }
-
   .map-block {
     padding: 5%;
   }
-
   footer .conclusion-block {
     display: block;
     margin: 0;
@@ -1178,7 +1162,7 @@ footer .footer-block p a:hover {
   }
   footer .conclusion-block .footer-first-block:hover h3 {
     transform: translate3d(0, -20%, 0);
-    color: #f38181;
+    color: rgb(243, 129, 129);
   }
   footer .conclusion-block .footer-first-block:hover .followers {
     transform: translate3d(36%, 0, 0);
@@ -1220,11 +1204,9 @@ footer .footer-block p a:hover {
   .about-block .image-block {
     margin-bottom: 5%;
   }
-
   .counter-block {
     flex-wrap: wrap;
   }
-
   .skills-block {
     flex-wrap: wrap;
   }
@@ -1235,7 +1217,6 @@ footer .footer-block p a:hover {
   .skills-block .aside-text {
     flex-basis: 90%;
   }
-
   .icon-block {
     flex-direction: column;
     align-items: center;
@@ -1258,18 +1239,15 @@ footer .footer-block p a:hover {
   .icon-block .half-block div:last-child {
     margin-right: 0;
   }
-
   .tablet-block .images .ipad {
     width: 80%;
   }
   .tablet-block .images .iphone {
     display: none;
   }
-
   .creators-block {
     flex-wrap: wrap;
   }
-
   .images-block {
     display: block;
     width: 70%;
@@ -1300,7 +1278,7 @@ footer .footer-block p a:hover {
     z-index: 999;
     top: 100%;
     right: 0;
-    background-color: #f38181;
+    background-color: rgb(243, 129, 129);
     width: 30%;
   }
   header nav .list ul {
@@ -1316,7 +1294,7 @@ footer .footer-block p a:hover {
     height: 15px;
     margin-right: 0;
     padding: 10%;
-    border-bottom: 1px solid #fce38a;
+    border-bottom: 1px solid rgb(252, 227, 138);
   }
   header nav .list ul li .active {
     border-bottom: none;
@@ -1325,8 +1303,8 @@ footer .footer-block p a:hover {
     border-bottom: none;
   }
   header nav .list ul .active-list {
-    border-top: 1px solid #fce38a;
-    border-bottom: 1px solid #fce38a;
+    border-top: 1px solid rgb(252, 227, 138);
+    border-bottom: 1px solid rgb(252, 227, 138);
   }
   header nav .list ul .active-list a {
     color: white;
@@ -1358,7 +1336,6 @@ footer .footer-block p a:hover {
   header .progress .progress-bar .text {
     font-size: 8pt;
   }
-
   .caption-block {
     margin-top: 15%;
     margin-bottom: 15%;
@@ -1374,11 +1351,9 @@ footer .footer-block p a:hover {
     margin-bottom: 7%;
     width: 30%;
   }
-
   .about-block .image-block {
     width: 80%;
   }
-
   .coment-block {
     flex-direction: column;
   }
@@ -1391,12 +1366,10 @@ footer .footer-block p a:hover {
   .coment-block .aside-text p {
     padding-left: 5%;
   }
-
   .counter-block {
     font-size: 18pt;
     flex-direction: column;
   }
-
   .icon-block .half-block .icon-all {
     width: 90%;
     padding: 0;
@@ -1404,11 +1377,9 @@ footer .footer-block p a:hover {
   .icon-block .half-block .icon-all:hover .icon {
     transform: none;
   }
-
   .skills-block img {
     margin-bottom: 15%;
   }
-
   .logo-block {
     height: 150px;
     display: flex;
@@ -1418,7 +1389,6 @@ footer .footer-block p a:hover {
   .logo-block img {
     height: 50px;
   }
-
   .client-block .image-block div[class^=row] .client .client-all {
     flex-direction: column;
   }
@@ -1437,19 +1407,16 @@ footer .footer-block p a:hover {
   .client-block .image-block div[class^=row] .client:hover .client-all {
     transform: none;
   }
-
   .blog-block .news:hover .news-all {
     transform: none;
   }
-
   .map-block hr {
     width: 35%;
   }
-
   footer .conclusion-block .footer-second-block .image-text-block img {
     min-height: 100px;
   }
   footer .conclusion-block .footer-second-block .image-text-block:hover {
     transform: none;
   }
-}
+}/*# sourceMappingURL=main.css.map */

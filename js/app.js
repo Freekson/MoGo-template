@@ -13,7 +13,7 @@ $(function() {
     });
 
     function checkScroll(scrollOffset) { //функция
-        console.log(height);
+
         if(scrollOffset > height){ //проверка высоты скрола
             header.addClass("fixed");
         }
